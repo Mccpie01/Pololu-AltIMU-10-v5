@@ -39,6 +39,6 @@ Communication
 
 Hakan KAYA - mail@hakankaya.kim
 
-English version - Pierre McCarragher
+English version - Pierre McCarragher - pierremccarragher@hotmail.com
 
 
