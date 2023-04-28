@@ -1,53 +1,44 @@
- 
-# Pololu AltIMU-10 v5 Gyro, İvme Ölçer, Pusula ve Yükseklik Sensör Modülü
+Pololu AltIMU-10 v5 Gyro, Accelerometer, Compass and Altitude Sensor Module
 
-Bu repository AltIMU-10 kompleks sensör mödülünün çalışmalarını içermektedir. 
+This repository contains the work of the AltIMU-10 complex sensor module.
 
-İvme ölçer ve Gyro gibi sensörler ile çalışmak zaman ve emek isteyen çalışmalardır.
-Ve bazen oldukça sıkıcı olabilmektedir. Bu sensörler ile yapmış olduğum çalışmaları 
-burada derli toplu olması açısında açık kaynak olarak geliştiricilere sundum.
+Working with sensors such as the accelerometer and Gyro is time-consuming and labor-intensive. And it can be pretty boring at times. I have presented the work I have done with these sensors to the developers as open source in order to be tidy here.
 
-Faydalı olması dileğiyle.
+Hope it is useful.
+calibration
 
-### Kalibrasyon
+Sensors such as accelerometers and gyro are very sensitive and noisy modules. Since direct use cannot provide stability, various filters must be applied.
 
-İvme ölçer, gyro gibi sensörler oldukça hassas ve gürültülü çalışan modüllerdir.
-Doğrudan kullanımı stabilite sağlayamadığı için çeşitli filtreler uygulanmalıdır.
+You can find sample studies such as Kalman filter, normalization, weighted standard deviation in the repo.
 
-Kalman filtresi, normalizasyon, ağırlıklı standart sapma gibi örnek 
-çalışmaları repo içerisinde
-bulabilirsiniz.
-
-Kalibrasyon örneği (Kalman Filter);
+Calibration example (Kalman Filter); calibration
 ![calibration](https://github.com/haknkayaa/Pololu-AltIMU-10-v5/blob/main/images/calibration.jpg)
 
-- Mavi çizgi sensörden okunan işlenmemiş ivme değeri (tek bir eksen)
-- Kırmızı çizgi Kalman filtresi sonrası hesaplanan değer (tek bir eksen)
+Raw acceleration value read from blue line sensor (single axis)
+    Red line Value calculated after Kalman filter (single axis)
 
-### Görselleştirme
+visualization
 
-Gerçek zamanlı seri port üzerinden alınan verileri bilgisayar üzerinde 3d görselleştirilmesi
-için Processing 3.5.4 kullanılmıştır.
+Processing 3.5.4 is used to visualize the data received via real-time serial port on the computer in 3D.
 
-"*visualization*" klasörü içerisinde processing projelerini çalıştırırken COM port seçimlerini
-düzenlemeyi unutmayın.
-
-Render ile görselleştirilmiş processing GUI ekran görüntüsü;
+Do not forget to edit the COM port selections while running the processing projects in the "visualization" folder.
 
 ![calibration](https://github.com/haknkayaa/Pololu-AltIMU-10-v5/blob/main/images/processing.gif)
 
 
-### Geliştirme Ortamı
- - MCU: Teensy 3.6 
- - Build, Compiler ve Debugger: CMake 3.19.3, MinGW64 6.0
- - IDE: Jetbrains CLion IDE 2021,
- - FrameWork: PlatformIO Core and CLI
- - Görselleştirme/GUI:  Processing 3.5.4
- - OS: Windows 10 Pro 
+Development Environment
 
-### İletişim
+    MCU: Teensy 3.6
+    Build, Compiler and Debugger: CMake 3.19.3, MinGW64 6.0
+    IDE: Jetbrains CLion IDE 2021,
+    Framework: PlatformIO Core and CLI
+    Visualization/GUI: Processing 3.5.4
+    OS: Windows 10 Pro
 
-[Hakan KAYA](https://www.hakankaya.kim) - mail@hakankaya.kim
+Communication
 
+Hakan KAYA - mail@hakankaya.kim
+
+English version - Pierre McCarragher
 
 
